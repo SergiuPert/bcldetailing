@@ -2,91 +2,51 @@ import React from 'react';
 import ServiceInfo from "./ServiceInfo";
 
 const DetailingExterior = () => {
-    const title = "Detailing Exterior"
-    const description = "Scapa de micile zgarieturi ale masinii, de galbenul farurilor și reda luciul vopselei"
-    const beforeList = "Detailing-ul exterior este metoda profesionista de curatare a exteriorului masinii care, impreuna cu protectia ceramica, te ajuta sa:"
-    const list = ["scapi de imperfectiunile de pe caroserie",
-        "scapi de oxidarea de la suprafata lacului care reduc luciul vopselei si aspectul neplacut",
-        "iti va fi mai usor sa o speli și datorita protectiei ceramice, care chiar te va scuti de cateva drumuri la spalatorie",
-        "masina va fi protejata impotriva factorilor de mediu și externi (ploaie, soare puternic, raze uv, solutiile antiderapante folosite pentru deszapezire s.a.)"]
+    const title = "Detailing Exterior Auto"
+    const description = "Serviciul complet de detailing exterior contine: spalare exterioara detaliata, decontaminare cu argila, suflare cu aer comprimat si uscare, izolarea masinii cu banda de protectie, corectie lac in 1-3 pasi/polisarea lacului, aplicare protectie vopsea, curatarea jantelor si a anvelopelor, curatarea si degresarea geamurilor."
+    const beforeList = "Serviciile de detailing exterior disponibile sunt urmatoarele:"
+    const list = [ 	"Decontaminare vopsea cu argila",
+                    "Curatare si degresare geamuri",
+                    "Aplicare tratament hidrofob pentru geamuri",
+                    "Curatare jante",
+                    "Aplicare protectie ceramica jante",
+                    "Hidratare anvelope",
+                    "Polish lac",
+                    "Corectie lac",
+                    "Aplicare protectie vopsea (sealant/ceara)",
+                    "Polish faruri si aplicare folie de protectie"
+                    ]
+
     const packs = [
         {
-            packageName: "Detailing exterior Bronze",
+            packageName: "",
             packageBullets: ["Linia 1", "Linia 2", "Linia 3", "Linia 4", "Linia 5"],
-            packagePrices: [
+            packagePrices: [],
+            services: [
                 {
-                    carType: "Masina mica",
-                    price: 500
-                },
-                {
-                    carType: "Sedan / Limuzina / Break",
-                    price: 700
-                },
-                {
-                    carType: "SUV",
+                    service: "Polish one-step",
                     price: 800
-                }
-            ]        },
-        {
-            packageName: "Detailing exterior Silver",
-            packageBullets: ["Linia 1", "Linia 2", "Linia 3", "Linia 4", "Linia 5"],
-            packagePrices: [
-                {
-                    carType: "Masina mica",
-                    price: 1000
                 },
                 {
-                    carType: "Sedan / Limuzina / Break",
+                    service: "Corectie lac (variaza in functie de gradul de corectie si dimensiunea masinii)",
                     price: 1300
                 },
                 {
-                    carType: "SUV",
-                    price: 1500
-                }
-            ]
-        },
-        {
-            packageName: "Detailing exterior Gold",
-            packageBullets: ["Linia 1", "Linia 2", "Linia 3", "Linia 4", "Linia 5"],
-            packagePrices: [
-                {
-                    carType: "Masina mica",
-                    price: 1300
+                    service: "Aplicare protectie ceramic jante",
+                    price: 400
                 },
                 {
-                    carType: "Sedan / Limuzina / Break",
-                    price: 1500
-                },
-                {
-                    carType: "SUV",
-                    price: 1600
-                }
-            ]
-        },
-        {
-            packageName: "Detailing exterior Platinum",
-            packageBullets: ["Linia 1", "Linia 2", "Linia 3", "Linia 4", "Linia 5"],
-            packagePrices: [
-                {
-                    carType: "Masina mica",
-                    price: 1500
-                },
-                {
-                    carType: "Sedan / Limuzina / Break",
-                    price: 1700
-                },
-                {
-                    carType: "SUV",
-                    price: 1800
+                    service: "Polish faruri si aplicare folie de protectie ",
+                    price: 450
                 }
             ]
         }
     ]
-
+    const duration = "variaza in functie de complexitatea serviciului"
 
     return (
         <div className="App">
-            <ServiceInfo title={title} description={description} beforeList={beforeList} list={list} packs={packs}/>
+            <ServiceInfo title={title} duration={duration} description={description} beforeList={beforeList} list={list} packs={packs}/>
         </div>
     );
 };

@@ -18,6 +18,8 @@ code {
   /*width: 15%;*/
   background-color: #262627;
   width: 300px;
+  /*width: 15%;*/
+  /*min-width: 200px;*/
   position: fixed;
   z-index: 1;
   top: 0;
@@ -84,7 +86,7 @@ code {
 
 .AboutContentDiv {
   position: relative;
-  padding:15% 5%;
+  padding: 3% 5%;
   margin-left: 300px;
   display: grid;
   color: white;

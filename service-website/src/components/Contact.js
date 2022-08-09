@@ -21,11 +21,12 @@ const Contact = () => {
             <div className="ContactDiv">
                 <div className="ContactDetails">
                     <h4 className="ContactHeading">E-MAIL</h4>
-                    <p className="ContactText">aaaaaaa@aaa.com</p>
+                    {/*<p className="ContactText">bcldetailing@gmail.com</p>*/}
+                    <a className="ContactText" href = "mailto: bcldetailing@gmail.com">bcldetailing@gmail.com</a>
                     <h4 className="ContactHeading">TELEFON</h4>
-                    <p className="ContactText">0722222222</p>
+                    <p className="ContactText">(+40) 725 187 393</p>
                     <h4 className="ContactHeading">ADRESĂ</h4>
-                    <p className="ContactText">Str. Mihai Viteazul nr. 30</p>
+                    <p className="ContactText">Bucuresti, Sector 1,  str. Mihai Viteazul 30</p>
                 </div>
                 <GMap/>
             </div>

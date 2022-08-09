@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link, Route} from "react-router-dom";
+import { FaArrowRight } from 'react-icons/fa';
 
 const NavBar = () => {
     return (
@@ -13,8 +14,8 @@ const NavBar = () => {
                 <Link className="navBarButton" to="/galerie" >Galerie</Link>
                 <div className="navBarButton dropdownButton">Servicii</div>
                     <div className="dropdown-content">
-                        <Link className="navBarButton" to="/detailinginterior" > - Detailing Interior</Link>
-                        <Link className="navBarButton" to="/detailingexterior" > - Detailing Exterior</Link>
+                        <Link className="navBarButton" to="/detailinginterior" ><FaArrowRight /><span style={{verticalAlign: "3px"}}> Detailing Interior</span></Link>
+                        <Link className="navBarButton" to="/detailingexterior" ><FaArrowRight /><span style={{verticalAlign: "3px"}}> Detailing Exterior </span></Link>
                     </div>
                 <Link className="navBarButton" to="/contact" >Contact</Link>
             </div>
