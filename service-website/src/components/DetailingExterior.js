@@ -3,14 +3,14 @@ import ServiceInfo from "./ServiceInfo";
 
 const DetailingExterior = () => {
     const title = "Detailing Exterior Auto"
-    const description = "Serviciul complet de detailing exterior contine: spalare exterioara detaliata, decontaminare cu argila, suflare cu aer comprimat si uscare, izolarea masinii cu banda de protectie, corectie lac in 1-3 pasi/polisarea lacului, aplicare protectie vopsea, curatarea jantelor si a anvelopelor, curatarea si degresarea geamurilor."
+    const description = "Serviciul complet de detailing exterior contine: spalare exterioara in detaliu, decontaminare cu argila, suflare cu aer comprimat si uscare, izolarea masinii cu banda de protectie, corectie lac in 1-3 pasi, aplicare protectie vopsea, curatarea jantelor si a anvelopelor, curatarea si degresarea geamurilor."
     const beforeList = "Serviciile de detailing exterior disponibile sunt urmatoarele:"
-    const list = [ 	"Decontaminare vopsea cu argila",
-                    "Curatare si degresare geamuri",
+    const list = [
+
                     "Aplicare tratament hidrofob pentru geamuri",
-                    "Curatare jante",
+
                     "Aplicare protectie ceramica jante",
-                    "Hidratare anvelope",
+
                     "Polish lac",
                     "Corectie lac",
                     "Aplicare protectie vopsea (sealant/ceara)",
@@ -25,19 +25,19 @@ const DetailingExterior = () => {
             services: [
                 {
                     service: "Polish one-step",
-                    price: 800
+                    price: "de la 800"
                 },
                 {
                     service: "Corectie lac (variaza in functie de gradul de corectie si dimensiunea masinii)",
-                    price: 1300
+                    price: "de la 1500"
                 },
                 {
                     service: "Aplicare protectie ceramic jante",
-                    price: 400
+                    price: "de la 400"
                 },
                 {
                     service: "Polish faruri si aplicare folie de protectie ",
-                    price: 450
+                    price: "de la 450"
                 }
             ]
         }

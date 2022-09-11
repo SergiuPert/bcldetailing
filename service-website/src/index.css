@@ -70,9 +70,14 @@ code {
 
 .homeImage {
   position: relative;
-  height: 100%;
+  height: 70vw;
   width: 100%;
 }
+
+/*.contentDiv1 {*/
+/*  background-image: url("../src/images/IMG_2143.jpg");*/
+/*}*/
+
 
 .contentDiv2 {
   position: relative;

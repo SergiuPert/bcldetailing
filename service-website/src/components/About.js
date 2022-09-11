@@ -14,7 +14,7 @@ const About = () => {
                 <p>Strategia noastra se bazeaza pe o crestere organica si pe principiile etice care ne definesc.</p>
                 {/*<div className="ContactDetails">*/}
                     <p><FaCheckCircle color="green" /> Atelier acreditat</p>
-                    <p><FaCheckCircle color="green" /> Echipament & produse chimice profesionale</p>
+                    <p><FaCheckCircle color="green" /> Echipament & produse profesionale</p>
                     <p><FaCheckCircle color="green" /> Servicii de calitate</p>
                     <p><FaCheckCircle color="green" /> Profesionalism</p>
                 {/*</div>*/}

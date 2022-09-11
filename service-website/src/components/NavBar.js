@@ -16,6 +16,8 @@ const NavBar = () => {
                     <div className="dropdown-content">
                         <Link className="navBarButton" to="/detailinginterior" ><FaArrowRight /><span style={{verticalAlign: "3px"}}> Detailing Interior</span></Link>
                         <Link className="navBarButton" to="/detailingexterior" ><FaArrowRight /><span style={{verticalAlign: "3px"}}> Detailing Exterior </span></Link>
+                        <Link className="navBarButton" to="/detailingmotor" ><FaArrowRight /><span style={{verticalAlign: "3px"}}> Detailing Motor </span></Link>
+                        <Link className="navBarButton" to="/vopsireetriere" ><FaArrowRight /><span style={{verticalAlign: "3px"}}> Vopsire Etriere </span></Link>
                     </div>
                 <Link className="navBarButton" to="/contact" >Contact</Link>
             </div>
