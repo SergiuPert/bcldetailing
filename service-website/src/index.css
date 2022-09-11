@@ -13,6 +13,22 @@ code {
     monospace;
 }
 
+.quote {
+  font-style: italic;
+}
+
+p, li {
+  font-size: 0.85vw;
+}
+
+h1 {
+  font-size: 1.8vw;
+}
+
+h4 {
+  font-size: 0.9vw;
+}
+
 .navBar {
   height: 100%;
   /*width: 15%;*/
@@ -140,27 +156,44 @@ code {
 
 .serviceInfo {
   display: grid;
-  position: relative;
-  margin-top: 3%;
+  /*position: relative;*/
+  /*margin-top: 3%;*/
   margin-left: 300px;
   margin-right: 1vw;
+  background-image: url("../src/images/background1.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 56vw;
+  /*height: 100vh;*/
+  /*height: 100%;*/
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  margin-bottom: 0px;
 }
 
 .serviceTitle {
   color: white;
   font-size: 1.3vw;
-  padding: 3% 0%;
+  backdrop-filter: blur(2px);
+  /*padding: 3% 0%;*/
 }
 
 .serviceDiv {
-  background-color: #262627;
-  border: 2vw black solid;
+  /*background-color: rgba(38, 38, 39, 0.4);*/
+  /*border: 2vw black solid;*/
+  height: 100%;
   border-radius: 2.7vw;
+  backdrop-filter: blur(2px);
+
   color: white;
 }
 
 .serviceTitleSmall {
-  background-color: #eb1846;
+  background-color: #185002;
   width: 80%;
   margin: 0% 10%;
 }

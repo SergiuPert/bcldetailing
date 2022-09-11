@@ -6,7 +6,7 @@ import Package from "./Package";
 const ServiceInfo = (props) => {
     return (
         <div className="serviceInfo">
-            <ServiceTitle title={props.title} />
+            {/*<ServiceTitle title={props.title} />*/}
             <div className="serviceDiv">
                 <ServiceTitleSmall title={props.title} />
                 <div className="justifyText serviceText">
