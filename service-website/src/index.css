@@ -8,6 +8,8 @@ body {
   background-color: black;
 }
 
+html,body { height:100%; }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -29,20 +31,82 @@ h4 {
   font-size: 0.9vw;
 }
 
-.navBar {
+.burgerButton {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  [class*="All"] {
+    min-height: 205vw !important;
+  }
+  [class *= "navBar"] {
+    position: fixed;
+    min-height: 205vw !important;
+  }
+  [class *= "navBarButtonsDiv"] {
+    position: relative;
+    display: grid;
+  }
+  [class *= "navBarButton"] {
+    position: relative;
+    margin-left: 5vw;
+    min-height: 5vw !important;
+    padding: 0;
+  }
+  [class *= "logoDiv"] {
+    margin-left: 5vw;
+    margin-top: 20vw;
+    margin-bottom: 10vw !important;
+  }
+  [class *= "homeImage"] {
+    height: 200vw !important;
+  }
+  [class *= "displayNone"] {
+    display: none;
+  }
+  [class *= "burgerButton"] {
+    display: grid;
+    position: relative;
+    z-index: 10;
+    background-color: #262627;
+    min-width: 13vw;
+    min-height: 13vw;
+    padding: 3vw;
+  }
+  [class *= "burgerLine"] {
+    position: relative;
+    z-index: 1;
+    background-color: #262627;
+    height: 93%;
+    color: rgba(38, 38, 39, 0);
+  }
+}
+
+
+
+.All {
+  display: flex;
+  min-height: 44vw;
   height: 100%;
+}
+
+.navBar {
+  min-height: 44vw;
+  /*height: 100%;*/
   /*width: 15%;*/
   background-color: #262627;
-  width: 300px;
+  min-width: 300px;
+  max-width: 100%;
   /*width: 15%;*/
   /*min-width: 200px;*/
-  position: fixed;
+  /*position: fixed;*/
   z-index: 1;
   top: 0;
   left: 0;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
   padding-top: 5%;
 }
+
 
 .logoDiv {
   margin-bottom: 50%;
@@ -78,7 +142,7 @@ h4 {
 
 .content {
   /*margin-left: 15%;*/
-  margin-left: 300px;
+  /*margin-left: 300px;*/
   position:relative;
   display: grid;
   height: 100%;
@@ -86,7 +150,7 @@ h4 {
 
 .homeImage {
   position: relative;
-  height: 70vw;
+  height: 50vw;
   width: 100%;
 }
 
@@ -108,7 +172,7 @@ h4 {
 .AboutContentDiv {
   position: relative;
   padding: 3% 5%;
-  margin-left: 300px;
+  /*margin-left: 300px;*/
   display: grid;
   color: white;
 }
@@ -134,7 +198,7 @@ h4 {
 }
 
 .carouselDiv {
-  margin-left: 300px;
+  /*margin-left: 300px;*/
   position: relative;
 }
 
@@ -156,10 +220,10 @@ h4 {
 
 .serviceInfo {
   display: grid;
-  /*position: relative;*/
+  position: relative;
   /*margin-top: 3%;*/
-  margin-left: 300px;
-  margin-right: 1vw;
+  /*margin-left: 300px;*/
+  /*margin-right: 1vw;*/
   background-image: url("../src/images/background1.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -167,11 +231,11 @@ h4 {
   height: 56vw;
   /*height: 100vh;*/
   /*height: 100%;*/
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
+  /*position: absolute;*/
+  /*top: 0px;*/
+  /*bottom: 0px;*/
+  /*right: 0px;*/
+  /*left: 0px;*/
   margin-bottom: 0px;
 }
 
@@ -217,7 +281,7 @@ h4 {
 .Contact {
   position: relative;
   margin-top: 3%;
-  margin-left: 300px;
+  /*margin-left: 300px;*/
 }
 
 .ContactTitle {
@@ -279,12 +343,47 @@ margin-top: 3%;
   text-align: justify;
 }
 
+@media only screen and (max-width: 768px) {
 
-
-
-.test {
-  background-color: yellow;
-  width: 100%;
-  height: auto;
-
+  [class *= "carouselDiv"] {
+    margin-top: 20vw;
+    margin-right: 20vw;
+    z-index: 0;
+  }
+  [class *= "serviceInfo"] {
+    height: 100%;
+  }
+  [class *= "serviceTitleHeading"] {
+    text-align: start;
+  }
+  [class *= "serviceTitleSmall"] {
+    width: 100%;
+    margin: 0;
+  }
+  [class *= "serviceText"] {
+    text-align: left;
+  }
+  [class *= "ServicePacksDiv"] {
+    display: contents !important;
+  }
+  [class *= "Pack"] {
+    margin: 0% 2%;
+  }
+  [class *= "ContactDiv"] {
+    display: inline-block;
+  }
+  p {
+    font-size: 4vw;
+  }
+  h1 {
+    font-size: 6vw;
+  }
+  li {
+    font-size: 4vw;
+  }
+  h4 {
+    font-size: 5vw;
+  }
 }
+
+

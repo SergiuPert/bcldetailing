@@ -9,7 +9,7 @@ const Galery = () => {
                 <Carousel showArrows={true} swipeable={true} dynamicHeight={true}>
                     {images.map(image =>
                         <div>
-                            <img style={{width:"85%", height:"30%", top: "0", bottom: "0"}} src={require(`../images/${image}`)} />
+                            <img className={"fuuuuu"} style={{width:"85%", height:"30%", top: "0", bottom: "0"}} src={require(`../images/${image}`)} />
                         </div>
                     )}
                 </Carousel>

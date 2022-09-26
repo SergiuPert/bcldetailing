@@ -1,27 +1,38 @@
 import React from 'react';
 import {Link, Route} from "react-router-dom";
 import { FaArrowRight } from 'react-icons/fa';
+import {GiHamburgerMenu} from "react-icons/gi";
 
 const NavBar = () => {
+    const toggleBurger = () => {
+        let burger = document.getElementById("navId")
+        burger.classList.toggle("displayNone")
+    }
     return (
-        <nav className="navBar">
+        <>
+            <div>
+                <GiHamburgerMenu className={"burgerButton"} color="white" onClick={()=> toggleBurger()}/>
+                <div className={"burgerLine"}>A</div>
+            </div>
+        <nav className="navBar displayNone" id="navId">
             <div className="logoDiv">
-                <Link className="logo" to="/" >BCL Detailing Garage</Link>
+                <Link className="logo" to="/" onClick={()=> toggleBurger()}>BCL Detailing Garage</Link>
             </div>
             <div className="navBarButtonsDiv">
-                <Link className="navBarButton" to="/" >Acasa</Link>
-                <Link className="navBarButton" to="/desprenoi" >Despre Noi</Link>
-                <Link className="navBarButton" to="/galerie" >Galerie</Link>
+                <Link className="navBarButton" to="/" onClick={()=> toggleBurger()}>Acasa</Link>
+                <Link className="navBarButton" to="/desprenoi" onClick={()=> toggleBurger()}>Despre Noi</Link>
+                <Link className="navBarButton" to="/galerie" onClick={()=> toggleBurger()}>Galerie</Link>
                 <div className="navBarButton dropdownButton">Servicii</div>
                     <div className="dropdown-content">
-                        <Link className="navBarButton" to="/detailinginterior" ><FaArrowRight /><span style={{verticalAlign: "3px"}}> Detailing Interior</span></Link>
-                        <Link className="navBarButton" to="/detailingexterior" ><FaArrowRight /><span style={{verticalAlign: "3px"}}> Detailing Exterior </span></Link>
-                        <Link className="navBarButton" to="/detailingmotor" ><FaArrowRight /><span style={{verticalAlign: "3px"}}> Detailing Motor </span></Link>
-                        <Link className="navBarButton" to="/vopsireetriere" ><FaArrowRight /><span style={{verticalAlign: "3px"}}> Vopsire Etriere </span></Link>
+                        <Link className="navBarButton" to="/detailinginterior" onClick={()=> toggleBurger()}><FaArrowRight /><span style={{verticalAlign: "3px"}}> Detailing Interior</span></Link>
+                        <Link className="navBarButton" to="/detailingexterior" onClick={()=> toggleBurger()}><FaArrowRight /><span style={{verticalAlign: "3px"}}> Detailing Exterior </span></Link>
+                        <Link className="navBarButton" to="/detailingmotor" onClick={()=> toggleBurger()}><FaArrowRight /><span style={{verticalAlign: "3px"}}> Detailing Motor </span></Link>
+                        <Link className="navBarButton" to="/vopsireetriere" onClick={()=> toggleBurger()}><FaArrowRight /><span style={{verticalAlign: "3px"}}> Vopsire Etriere </span></Link>
                     </div>
-                <Link className="navBarButton" to="/contact" >Contact</Link>
+                <Link className="navBarButton" to="/contact" onClick={()=> toggleBurger()}>Contact</Link>
             </div>
         </nav>
+        </>
     );
 };
 

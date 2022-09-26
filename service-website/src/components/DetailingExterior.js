@@ -45,9 +45,7 @@ const DetailingExterior = () => {
     const duration = "variaza in functie de complexitatea serviciului"
 
     return (
-        <div className="App">
             <ServiceInfo title={title} duration={duration} description={description} beforeList={beforeList} list={list} packs={packs}/>
-        </div>
     );
 };
 

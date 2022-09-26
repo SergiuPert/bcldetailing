@@ -51,9 +51,7 @@ const DetailingInterior = () => {
     const pack = {} //small pack here
 
     return (
-        <div className="App">
             <ServiceInfo title={title} duration={duration} description={description} beforeList={beforeList} list={list} packs={packs}/>
-        </div>
     );
 };
 
