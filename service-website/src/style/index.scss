@@ -18,6 +18,10 @@
     height: 100%;
 }
 
+%fullwidth {
+    width: 100%;
+}
+
 %posrel {
     position: relative;
 }
@@ -139,6 +143,11 @@ h4 {
     }
 }
 
+.App {
+    @extend %fullwidth;
+    text-align: center;
+}
+
 .All {
     @extend %flex;
     @extend %halfsize;
@@ -220,8 +229,8 @@ h4 {
 
 .homeImage {
     @extend %posrel;
+    @extend %fullwidth;
     height: 50vw;
-    width: 100%;
 
     @media only screen and (max-width: 768px) {
         height: 200vw !important;
