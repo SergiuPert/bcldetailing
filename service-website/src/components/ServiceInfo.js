@@ -1,30 +1,36 @@
-import React from 'react';
+import React from "react";
 import ServiceTitleSmall from "./ServiceTitleSmall";
-import ServiceTitle from "./ServiceTitle";
 import Package from "./Package";
 
-const ServiceInfo = (props) => {
+const ServiceInfo = ({
+    title,
+    description,
+    beforeList,
+    list = [],
+    packs = [],
+    duration,
+}) => {
     return (
         <div className="serviceInfo">
-            {/*<ServiceTitle title={props.title} />*/}
             <div className="serviceDiv">
-                <ServiceTitleSmall title={props.title} />
+                <ServiceTitleSmall title={title} />
                 <div className="justifyText serviceText">
-                    <p>{props.description}</p>
-                    <h4>{props.beforeList}</h4>
+                    <p>{description}</p>
+                    <h4>{beforeList}</h4>
                     <ul>
-                        {props.list.map(sentence =>
-                            <li>{sentence}</li>
-                        )}
+                        {list.length > 0 &&
+                            list.map((sentence, key) => (
+                                <li key={key}>{sentence}</li>
+                            ))}
                     </ul>
                 </div>
-                {/*<h4 className="justifyText serviceText">Pachete:</h4>*/}
                 <div className="ServicePacksDiv">
-                    {props.packs.map(pack =>
-                        <Package pack={pack} />
-                    )}
+                    {packs.length > 0 &&
+                        packs.map((pack, key) => (
+                            <Package pack={pack} key={key} />
+                        ))}
                 </div>
-                <h3>Timp de lucru: {props.duration}</h3>
+                <h3>Timp de lucru: {duration}</h3>
             </div>
         </div>
     );

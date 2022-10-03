@@ -1,13 +1,5 @@
-import React from 'react';
-import NavBar from "./NavBar";
-import Home from "./Home";
-import Footer from "./Footer";
+import React from "react";
 
-const Services = () => {
-    return (
-        <div className="App">
-        </div>
-    );
-};
+const Services = () => <div className="App"></div>;
 
 export default Services;

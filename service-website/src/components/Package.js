@@ -1,19 +1,20 @@
-import React from 'react';
+import React from "react";
 
-const Package = (props) => {
+const Package = ({ pack }) => {
     return (
         <div className="Pack">
             <h1 className="PackageName">Preturi:</h1>
-            {props.pack.services.map(service =>
-            <p>{service.service} - {service.price} lei</p>
-            )}
-            <h1 className="PackageName">{props.pack.packageName}</h1>
-            {/*{props.pack.packageBullets.map(bullet =>*/}
-            {/*<p> - {bullet}</p>*/}
-            {/*)}*/}
-            {props.pack.packagePrices.map(price =>
-                <p>{price.carType} - {price.price} lei</p>
-            )}
+            {pack.services.map((service, key) => (
+                <p key={key}>
+                    {service.service} - {service.price} lei
+                </p>
+            ))}
+            <h1 className="PackageName">{pack.packageName}</h1>
+            {pack.packagePrices.map((price, key) => (
+                <p key={key}>
+                    {price.carType} - {price.price} lei
+                </p>
+            ))}
         </div>
     );
 };
