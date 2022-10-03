@@ -1,0 +1,420 @@
+%hide {
+    display: none;
+}
+
+%flex {
+    display: flex;
+}
+
+%grid {
+    display: grid;
+}
+
+%halfsize {
+    min-height: 44vw;
+}
+
+%fullheight {
+    height: 100%;
+}
+
+%posrel {
+    position: relative;
+}
+
+%darkgrey {
+    background-color: #262627;
+}
+
+%zindex {
+    z-index: 1;
+}
+
+%nodecoration {
+    text-decoration: none;
+}
+
+%white {
+    color: #fff;
+}
+
+%red {
+    color: #eb1846;
+}
+
+%top0 {
+    top: 0;
+}
+
+%center {
+    justify-content: center;
+}
+
+%font13 {
+    font-size: 1.3vw;
+}
+
+%blur {
+    backdrop-filter: blur(2px);
+}
+
+%margintop3 {
+    margin-top: 3%;
+}
+
+%justify {
+    text-align: justify;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: black;
+}
+
+html,
+body {
+    @extend %fullheight;
+}
+
+.quote {
+    font-style: italic;
+}
+
+p,
+li {
+    font-size: 0.85vw;
+    @media only screen and (max-width: 768px) {
+        font-size: 4vw;
+    }
+}
+
+h1 {
+    font-size: 1.8vw;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 6vw;
+    }
+}
+
+h4 {
+    font-size: 0.9vw;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 5vw;
+    }
+}
+
+.burgerButton {
+    @extend %hide;
+
+    @media only screen and (max-width: 768px) {
+        display: grid;
+        position: relative;
+        z-index: 10;
+        background-color: #262627;
+        min-width: 13vw;
+        min-height: 13vw;
+        padding: 3vw;
+    }
+}
+
+.displayNone {
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.burgerLine {
+    @media only screen and (max-width: 768px) {
+        position: relative;
+        z-index: 1;
+        background-color: #262627;
+        height: 93%;
+        color: rgba(38, 38, 39, 0);
+    }
+}
+
+.All {
+    @extend %flex;
+    @extend %halfsize;
+    @extend %fullheight;
+
+    @media only screen and (max-width: 768px) {
+        min-height: 205vw !important;
+    }
+}
+
+.navBar {
+    @extend %halfsize;
+    @extend %darkgrey;
+    @extend %zindex;
+    @extend %top0;
+    min-width: 300px;
+    max-width: 100%;
+    left: 0;
+    padding-top: 5%;
+
+    @media only screen and (max-width: 768px) {
+        position: fixed;
+        min-height: 205vw !important;
+    }
+}
+
+.logoDiv {
+    margin-bottom: 50%;
+
+    @media only screen and (max-width: 768px) {
+        margin-left: 5vw;
+        margin-top: 20vw;
+        margin-bottom: 10vw !important;
+    }
+}
+
+.logo {
+    @extend %posrel;
+    @extend %nodecoration;
+    @extend %white;
+    left: 1vw;
+    font-family: "Bauhaus 93";
+}
+
+.navBarButtonsDiv {
+    @extend %grid;
+    @extend %posrel;
+
+    @media only screen and (max-width: 768px) {
+        position: relative;
+        display: grid;
+    }
+}
+
+.navBarButton {
+    @extend %nodecoration;
+    @extend %white;
+    justify-content: left;
+    padding: 5% 0% 5% 5%;
+
+    &:hover {
+        @extend %red;
+        background-color: #0c0c0c;
+    }
+
+    @media only screen and (max-width: 768px) {
+        position: relative;
+        margin-left: 5vw;
+        min-height: 5vw !important;
+        padding: 0;
+    }
+}
+
+.content {
+    @extend %posrel;
+    @extend %grid;
+    @extend %fullheight;
+}
+
+.homeImage {
+    @extend %posrel;
+    height: 50vw;
+    width: 100%;
+
+    @media only screen and (max-width: 768px) {
+        height: 200vw !important;
+    }
+}
+
+.contentDiv2 {
+    @extend %posrel;
+    @extend %top0;
+    background-color: #eb1846;
+}
+
+.contentDiv3 {
+    @extend %white;
+}
+
+.AboutContentDiv {
+    @extend %posrel;
+    @extend %grid;
+    @extend %white;
+    padding: 3% 5%;
+}
+
+.aboutButtonsDiv {
+    @extend %posrel;
+    @extend %flex;
+    @extend %center;
+    padding: 2vw;
+    gap: 2%;
+}
+
+.aboutLink {
+    @extend %nodecoration;
+    @extend %white;
+    padding: 1vw;
+    border: 0.1vw solid white;
+
+    &:hover {
+        @extend %darkgrey;
+    }
+}
+
+.carouselDiv {
+    @extend %posrel;
+
+    @media only screen and (max-width: 768px) {
+        margin-top: 20vw;
+        margin-right: 20vw;
+        z-index: 0;
+    }
+}
+
+.dropdown-content {
+    @extend %hide;
+    @extend %posrel;
+    @extend %zindex;
+    min-width: 160px;
+
+    .dropdownButton:hover ~ & {
+        @extend %grid;
+    }
+
+    &:hover {
+        @extend %grid;
+    }
+}
+
+.serviceInfo {
+    @extend %grid;
+    @extend %posrel;
+    background-image: url("/public/images/background1.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 56vw;
+    margin-bottom: 0;
+
+    @media only screen and (max-width: 768px) {
+        height: 100%;
+    }
+}
+
+.serviceTitle {
+    @extend %white;
+    @extend %font13;
+    @extend %blur;
+}
+
+.serviceDiv {
+    @extend %fullheight;
+    @extend %blur;
+    @extend %white;
+    border-radius: 2.7vw;
+}
+
+.serviceTitleSmall {
+    background-color: #185002;
+    width: 80%;
+    margin: 0 10%;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.serviceText {
+    margin: 0 2%;
+
+    @media only screen and (max-width: 768px) {
+        text-align: left;
+    }
+}
+
+.ServicePacksDiv {
+    @extend %grid;
+    @extend %center;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    column-gap: 10rem;
+
+    @media only screen and (max-width: 768px) {
+        display: contents !important;
+    }
+}
+
+.PackageName {
+    background-color: white;
+    color: #262627;
+}
+
+.Contact {
+    @extend %posrel;
+    @extend %margintop3;
+}
+
+.ContactTitle {
+    @extend %white;
+    @extend %font13;
+}
+
+.ContactHeading {
+    @extend %red;
+}
+
+.ContactText {
+    @extend %white;
+}
+
+.ContactDetails {
+    @extend %justify;
+}
+
+.map {
+    @extend %fullheight;
+    width: 40vw;
+}
+
+.ContactDiv {
+    @extend %grid;
+    grid-template-columns: 10% 150%;
+    column-gap: 10vw;
+    margin-right: 1vw;
+    margin-left: 1vw;
+
+    @media only screen and (max-width: 768px) {
+        display: inline-block;
+    }
+}
+
+.listItems {
+    @extend %justify;
+}
+
+.marginTop {
+    @extend %margintop3;
+}
+
+.Flex {
+    @extend %flex;
+}
+
+.justifyText {
+    @extend %justify;
+}
+
+.serviceTitleHeading {
+    @media only screen and (max-width: 768px) {
+        text-align: start;
+    }
+}
+
+.Pack {
+    @media only screen and (max-width: 768px) {
+        margin: 0% 2%;
+    }
+}

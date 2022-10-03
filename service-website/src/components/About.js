@@ -17,8 +17,8 @@ const About = () => (
         </p>
         <h1>Viziunea noastra</h1>
         <p>
-            Sloganul care ne reprezinta si dupa care ne ghidam{" "}
-            <span className={"quote"}>"Din pasiune pentru masini"</span>, expune
+            Sloganul care ne reprezinta si dupa care ne ghidam
+            <span className="quote">"Din pasiune pentru masini"</span>, expune
             punctul de pornire si motivatia dezvoltarii activitatii noastre.
             Viziunea noastra este de a deveni un jucator relevant pe piata de
             detailing auto.
