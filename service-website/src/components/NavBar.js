@@ -1,12 +1,22 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link, Route} from "react-router-dom";
 import { FaArrowRight } from 'react-icons/fa';
 import {GiHamburgerMenu} from "react-icons/gi";
 
 const NavBar = () => {
+    let [reservation, setReservation] = useState(null)
+    useEffect( () => {
+        fetch(`https://localhost:7013/Reservations/GetReservations`, {method: "GET",})
+            .then(response => response.json())
+            .then(response => setReservation(response))
+            .then(() => console.log(reservation))
+    },[])
+
+
     const toggleBurger = () => {
         let burger = document.getElementById("navId")
         burger.classList.toggle("displayNone")
+        console.log(reservation)
     }
     return (
         <>
