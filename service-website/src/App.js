@@ -16,7 +16,7 @@ import VopsireEtriere from "./components/VopsireEtriere";
 function App() {
   return (
     <div>
-        <BrowserRouter basename="/bcldetailing/">
+        <BrowserRouter>
             <div className="All">
                 <NavBar />
                 <div className="App">
