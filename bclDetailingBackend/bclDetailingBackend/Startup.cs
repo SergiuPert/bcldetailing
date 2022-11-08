@@ -38,7 +38,7 @@ namespace bclDetailingBackend
                 .UseSession()
                 .UseRouting()
                 .UseCors(builder => builder
-                    .WithOrigins(new[] { "http://localhost:3000" })
+                    .WithOrigins(new[] { "http://localhost" })
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials()
