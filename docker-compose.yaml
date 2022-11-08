@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+
+    backend:
+      build: ./bclDetailingBackend/bclDetailingBackend
+      container_name: bcl_backend
+      ports:
+        - "5050:5050"
+      volumes:
+        - ./api:/app
+        - ./app/node_modules
+
+    frontend:
+      build: ./service-website
+      container_name: bcl_frontend
+      ports:
+        - 80:80
+      environment:
+        NODE_ENV: production
