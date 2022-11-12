@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const NavBar = () => {
     let [reservation, setReservation] = useState(null)
     useEffect(() => {
-        fetch(`http://localhost:5050/Reservations/GetReservations`, { method: "GET" })
+        fetch(`http://bcldetailing2-env.eba-pxpnnvtt.eu-central-1.elasticbeanstalk.com:5050/Reservations/GetReservations`, { method: "GET" })
             .then(response => response.json())
             .then(response => setReservation(response))
             .then(() => console.log(reservation))
